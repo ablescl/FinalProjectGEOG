@@ -74,6 +74,7 @@ arcpy.management.CalculateField("Suitable_Buildings", "Usable_SR_MWh", "(!AREA_1
 arcpy.management.AddField("Suitable_Buildings", "Elec_Prod_MWh", "DOUBLE")
 arcpy.management.CalculateField("Suitable_Buildings", "Elec_Prod_MWh", "!Usable_SR_MWh! * 0.16 * 0.86", "PYTHON3")
 
+# Apply Symbology for the new layer
 arcpy.management.ApplySymbologyFromLayer(
     in_layer="Suitable_Buildings",
     in_symbology_layer=r"C:\Users\casey\OneDrive\Desktop\GIS Programming Final Project\Suitable_Buildings.lyrx",
